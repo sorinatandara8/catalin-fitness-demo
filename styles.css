@@ -83,16 +83,19 @@ h1 em,h2 em { color: inherit; font-style: normal; font-weight: 400; }
 .strength-divider { min-height:150px; padding:22px max(24px,calc((100vw - var(--container)) / 2)); position:relative; display:flex; align-items:center; justify-content:space-between; overflow:hidden; background:#eef0ed; border-bottom:1px solid var(--line); }
 .strength-copy { display:grid; gap:5px; }.strength-copy span { color:var(--accent-dark); font-size:.62rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; }.strength-copy strong { color:var(--navy); font-family:var(--font-display); font-size:clamp(1.45rem,2.2vw,2.1rem); font-weight:600; }
 .lifter { position:relative; width:160px; height:120px; margin-right:40px; }
-.barbell { position:absolute; z-index:3; top:0; left:0; width:160px; height:20px; animation:barbell-press 3.2s cubic-bezier(.45,0,.2,1) infinite; }
-.bar { position:absolute; top:8px; left:11px; right:11px; height:4px; border-radius:4px; background:var(--navy); }
+.barbell { position:absolute; z-index:3; top:0; left:20px; width:120px; height:20px; animation:barbell-press 3.2s cubic-bezier(.45,0,.2,1) infinite; }
+.bar { position:absolute; top:8px; left:11px; right:11px; height:3px; border-radius:4px; background:var(--navy); }
 .plate { position:absolute; top:2px; width:7px; height:16px; border-radius:2px; background:var(--navy); }.plate-left-outer { left:0; }.plate-left-inner { left:8px; height:12px; top:4px; }.plate-right-inner { right:8px; height:12px; top:4px; }.plate-right-outer { right:0; }
-.lifter-arms { position:absolute; z-index:2; top:8px; left:0; width:160px; height:52px; transform-origin:center bottom; animation:arms-press 3.2s cubic-bezier(.45,0,.2,1) infinite; }
-.lifter-arm { position:absolute; bottom:0; width:6px; height:52px; border-radius:6px; background:var(--navy); transform-origin:bottom center; }.lifter-arm-left { left:77px; transform:rotate(56deg); }.lifter-arm-right { right:77px; transform:rotate(-56deg); }
+.lifter-arms { position:absolute; z-index:2; top:11px; left:0; width:160px; height:50px; transform-origin:center bottom; animation:arms-press 3.2s cubic-bezier(.45,0,.2,1) infinite; }
+.lifter-arm { position:absolute; bottom:0; width:6px; height:30px; border-radius:6px; background:var(--navy); transform-origin:bottom center; }
+.lifter-arm::after { content:""; position:absolute; top:-23px; left:0; width:6px; height:27px; border-radius:6px; background:var(--navy); transform-origin:bottom center; }
+.lifter-arm-left { left:67px; transform:rotate(-43deg); }.lifter-arm-left::after { transform:rotate(68deg); }
+.lifter-arm-right { right:67px; transform:rotate(43deg); }.lifter-arm-right::after { transform:rotate(-68deg); }
 .lifter-head { position:absolute; z-index:3; top:37px; left:72px; width:16px; height:16px; border-radius:50%; background:var(--navy); }
 .lifter-body { position:absolute; top:55px; left:77px; width:6px; height:38px; border-radius:6px; background:var(--navy); }.lifter-body::before { content:""; position:absolute; top:1px; left:-12px; width:30px; height:6px; border-radius:6px; background:var(--navy); }
 .lifter-leg { position:absolute; top:89px; width:7px; height:31px; border-radius:6px; background:var(--navy); transform-origin:top center; }.lifter-leg-left { left:77px; transform:rotate(22deg); }.lifter-leg-right { right:77px; transform:rotate(-22deg); }
-@keyframes barbell-press { 0%,18%,100% { transform:translateY(13px); } 42%,76% { transform:translateY(0); } }
-@keyframes arms-press { 0%,18%,100% { transform:scaleY(.76); } 42%,76% { transform:scaleY(1); } }
+@keyframes barbell-press { 0%,18%,100% { transform:translateY(8px); } 42%,76% { transform:translateY(0); } }
+@keyframes arms-press { 0%,18%,100% { transform:translateY(7px) scaleY(.88); } 42%,76% { transform:translateY(0) scaleY(1); } }
 
 .google-strip { padding: 17px max(24px, calc((100vw - var(--container)) / 2)); display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 22px; background: var(--navy); color: white; }
 .google-strip p { margin: 0; color: rgba(255,255,255,.75); font-size: .84rem; }.google-strip > a { font-size: .78rem; font-weight: 800; }.google-strip > a:hover { text-decoration: underline; }.google-strip > small { grid-column: 1/-1; margin-top: -10px; color: rgba(255,255,255,.43); font-size: .59rem; }
