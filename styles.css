@@ -172,6 +172,7 @@ h1 em,h2 em { color: inherit; font-style: normal; font-weight: 400; }
   .gym-details div { grid-template-columns:115px 1fr; gap:12px; }
   .gym-gallery { height:auto; grid-template-columns:1fr 1fr; grid-template-rows:330px 190px; }
   .gym-photo-main { grid-column:1/-1; grid-row:auto; }
+  .gym-photo-small::after { display:none; }
   .media-grid { height:auto; grid-template-columns:1fr; grid-template-rows:350px 220px 250px; }
   .media-a { grid-row:auto; }
   .video-grid { grid-template-columns:1fr; }
