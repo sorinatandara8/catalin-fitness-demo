@@ -17,6 +17,7 @@ menuButton?.addEventListener('click', () => {
 menu?.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => {
   menu.classList.remove('open');
   menuButton?.setAttribute('aria-expanded', 'false');
+  menuButton?.setAttribute('aria-label', 'Deschide meniul');
 }));
 
 const revealObserver = new IntersectionObserver((entries) => {

@@ -131,6 +131,61 @@ h1 em,h2 em { color: inherit; font-style: normal; font-weight: 400; }
   .main-nav { position:fixed; top:76px; left:16px; right:16px; padding:22px; display:none; flex-direction:column; align-items:stretch; gap:17px; border:1px solid var(--line); border-radius:10px; background:white; box-shadow:0 18px 45px rgba(24,36,47,.12); }.main-nav.open { display:flex; }.menu-toggle { display:block; }.hero { grid-template-columns:1fr; gap:50px; }.hero-visual { width:100%; max-width:670px; }.about,.process,.gym-section,.exam-section,.contact-section { grid-template-columns:1fr; }.about-media { max-width:650px; }.process,.gym-section,.exam-section,.contact-section { gap:55px; }.gym-gallery { max-width:760px; width:100%; }.video-grid { grid-template-columns:1fr 1fr; }.video-card:first-child { grid-column:1/-1; }.review { grid-template-columns:1fr; gap:15px; }.review > small { text-align:left; }.contact-section { align-items:start; }
 }
 @media (max-width: 660px) {
-  .site-header { height:68px; }.brand-copy { display:none; }.hero { min-height:auto; padding-top:110px; padding-bottom:55px; }.hero-actions,.contact-actions { align-items:stretch; flex-direction:column; }.hero-actions .button,.contact-actions .button { width:100%; }.hero-proof { grid-template-columns:1fr 1fr; }.hero-visual { min-height:430px; }.hero-photo { height:420px; border-radius:8px 8px 40px 8px; }.note-top { top:30px; right:-4px; }.note-bottom { left:-4px; bottom:25px; }.google-strip { grid-template-columns:1fr auto; }.google-strip p { grid-column:1/-1; }.section { padding:78px 20px; }.goal-grid { grid-template-columns:1fr; }.goal,.goal:nth-child(odd),.goal:nth-child(even) { min-height:230px; padding:28px 0; border-right:0; }.goal h3 { margin-top:36px; }.about-photo { min-height:460px; }.experience-badge { right:-4px; }.process-list li { grid-template-columns:40px 1fr; }.gym-gallery { height:auto; grid-template-columns:1fr 1fr; grid-template-rows:370px 220px; }.gym-photo-main { grid-column:1/-1; grid-row:auto; }.media-grid { height:auto; grid-template-columns:1fr; grid-template-rows:400px 240px 280px; }.media-a { grid-row:auto; }.video-grid { grid-template-columns:1fr; }.video-card:first-child { grid-column:auto; }.video-card { min-height:330px; }.reviews-heading { display:block; }.rating-large { margin-top:30px; }.reviews-footer { align-items:stretch; flex-direction:column; }.location-card { min-height:300px; }.site-footer { grid-template-columns:1fr; }.footer-links { flex-wrap:wrap; }.floating-whatsapp small { display:none; }.floating-whatsapp { padding-right:8px; }
+  body { font-size:15px; }
+  .site-header { height:68px; padding-inline:20px; }
+  .brand-copy { display:grid; }
+  .brand-copy strong { font-size:.8rem; }
+  .brand-copy small { display:none; }
+  .brand-mark { width:40px; height:40px; }
+  .main-nav { top:68px; }
+  .hero { min-height:auto; padding:104px 20px 48px; gap:38px; }
+  h1 { font-size:clamp(2.65rem,12vw,3.35rem); line-height:1.03; }
+  h2 { font-size:clamp(2.05rem,9.5vw,2.75rem); }
+  .hero-lead { margin-bottom:25px; font-size:1.04rem; }
+  .hero-actions,.contact-actions { align-items:stretch; flex-direction:column; gap:16px; }
+  .hero-actions .button,.contact-actions .button { width:100%; }
+  .hero-proof { margin-top:38px; grid-template-columns:repeat(3,1fr); gap:10px; }
+  .hero-proof strong { font-size:.94rem; }
+  .hero-proof span { font-size:.62rem; line-height:1.4; }
+  .hero-visual { min-height:390px; }
+  .hero-photo { height:380px; border-radius:8px 8px 36px 8px; }
+  .floating-note { max-width:200px; }
+  .note-top { top:25px; right:-3px; }
+  .note-bottom { left:-3px; bottom:22px; }
+  .google-strip { grid-template-columns:1fr auto; padding-inline:20px; }
+  .google-strip p { grid-column:1/-1; }
+  .section { padding:66px 20px; scroll-margin-top:68px; }
+  .section-heading { margin-bottom:34px; }
+  .goal-grid { grid-template-columns:1fr; }
+  .goal,.goal:nth-child(odd),.goal:nth-child(even) { min-height:0; padding:25px 0 28px; border-right:0; }
+  .goal h3 { margin:30px 0 10px; }
+  .goal a { position:static; display:inline-flex; margin-top:10px; }
+  .about-photo { min-height:420px; }
+  .experience-badge { right:-3px; width:112px; height:112px; }
+  .credentials > div { grid-template-columns:36px 1fr; }
+  .about-principle { padding:20px; }
+  .process-list li { grid-template-columns:36px 1fr; }
+  .gym-details div { grid-template-columns:115px 1fr; gap:12px; }
+  .gym-gallery { height:auto; grid-template-columns:1fr 1fr; grid-template-rows:330px 190px; }
+  .gym-photo-main { grid-column:1/-1; grid-row:auto; }
+  .media-grid { height:auto; grid-template-columns:1fr; grid-template-rows:350px 220px 250px; }
+  .media-a { grid-row:auto; }
+  .video-grid { grid-template-columns:1fr; }
+  .video-card:first-child { grid-column:auto; }
+  .video-card { min-height:300px; }
+  .reviews-heading { display:block; }
+  .rating-large { margin-top:25px; }
+  .review { padding:22px 0; }
+  .reviews-footer { align-items:stretch; flex-direction:column; }
+  .exam-visual { min-height:350px; }
+  .contact-section { padding:66px 20px; gap:42px; }
+  .location-card { min-height:280px; padding:25px; }
+  .site-footer { grid-template-columns:1fr; padding-inline:20px; padding-bottom:90px; }
+  .footer-links { flex-wrap:wrap; gap:18px; }
+  .floating-whatsapp small { display:none; }
+  .floating-whatsapp { right:12px; bottom:12px; padding:6px; opacity:.94; }
+  .floating-whatsapp span { width:34px; height:34px; }
+  .video-dialog { max-height:calc(100dvh - 24px); overflow:auto; }
+  .dialog-preview { height:190px; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior:auto; }.reveal { opacity:1; transform:none; transition:none; } }
