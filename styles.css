@@ -154,7 +154,7 @@ h1 em,h2 em { color: inherit; font-style: normal; font-weight: 400; }
   .hero-photo { height:380px; border-radius:8px 8px 36px 8px; }
   .hero-photo-real img { object-position:50% 36%; }
   .floating-note { max-width:200px; }
-  .note-top { top:25px; right:-3px; }
+  .note-top { display:none; }
   .note-bottom { left:-3px; bottom:22px; }
   .google-strip { grid-template-columns:1fr auto; padding-inline:20px; }
   .google-strip p { grid-column:1/-1; }
